@@ -3,6 +3,7 @@ import { login } from "../api/auth.api";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { loginAction } from "../redux/slices/authSlices";
+import DocumentTitle from "../Components/DocumentTitle";
 
 const Login = () => {
   const [username, setUsername] = useState("");
@@ -23,6 +24,8 @@ const Login = () => {
       setLoading(false);
     });
   };
+
+  DocumentTitle({ title: "Login" });
 
   return (
     <>
